@@ -5,6 +5,7 @@ const nav = document.querySelector(".nav");
 const bus = document.querySelector(".bus-photo");
 const btn = document.querySelector(".btn");
 const logo = document.querySelector("h1");
+const destination = document.querySelector(".content-destination");
 
 // Add mouseover event listener
 nav.addEventListener("mouseover", function (event) {
@@ -32,5 +33,13 @@ window.addEventListener("resize", function () {
 // Add dblclick event listener that changes the logo color
 logo.addEventListener("dblclick", function (event) {
     event.target.classList.toggle("logo-toggle");
+});
+
+// Add scroll event listener that toggles the content font
+window.addEventListener("scroll", function () {
+    destination.style.fontWeight = "bold";
+    setTimeout(function() {
+        destination.style.fontWeight = "";
+      }, 500);
 });
 
