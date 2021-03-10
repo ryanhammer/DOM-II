@@ -4,6 +4,7 @@
 const nav = document.querySelector(".nav");
 const bus = document.querySelector(".bus-photo");
 const btn = document.querySelector(".btn");
+const logo = document.querySelector("h1");
 
 // Add mouseover event listener
 nav.addEventListener("mouseover", function (event) {
@@ -28,4 +29,8 @@ window.addEventListener("resize", function () {
     document.body.style.backgroundColor = "yellow";
 });
 
+// Add dblclick event listener that changes the logo color
+logo.addEventListener("dblclick", function (event) {
+    event.target.classList.toggle("logo-toggle");
+});
 
