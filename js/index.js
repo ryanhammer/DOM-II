@@ -2,7 +2,7 @@
 
 // Define variables for selected elements
 const nav = document.querySelector(".nav");
-const bus = document.querySelector("#bus-photo");
+const bus = document.querySelector(".bus-photo");
 const btn = document.querySelector(".btn");
 
 // Add mouseover event listener
@@ -22,4 +22,10 @@ function wheelZoom (event) {
     bus.style.transform = `scale(${scale})`;
 }
 bus.addEventListener("wheel", wheelZoom);
+
+// Add resize event listener that changes background color if window is resized
+window.addEventListener("resize", function () {
+    document.body.style.backgroundColor = "yellow";
+});
+
 
