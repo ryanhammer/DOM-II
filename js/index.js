@@ -6,6 +6,7 @@ const bus = document.querySelector(".bus-photo");
 const btn = document.querySelector(".btn");
 const logo = document.querySelector("h1");
 const destination = document.querySelector(".content-destination");
+const destinationTypes = document.querySelectorAll(".destination");
 
 // Add mouseover event listener
 nav.addEventListener("mouseover", function (event) {
@@ -43,3 +44,16 @@ window.addEventListener("scroll", function () {
       }, 500);
 });
 
+// Add keydown event listener that emphasizes destinations
+window.addEventListener("keydown", () => {
+    destinationTypes.forEach( (div) => {
+        div.style.backgroundColor = "aquamarine";
+    });
+});
+
+// Add keyup event leistern that de-emphasizes destinations
+window.addEventListener("keyup", () => {
+    destinationTypes.forEach( (div) => {
+        div.style.backgroundColor = "";
+    });
+});
