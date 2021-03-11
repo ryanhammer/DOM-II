@@ -66,3 +66,10 @@ contentSection.addEventListener("copy", function (event) {
     event.preventDefault();
     console.log(`The user copied '${copiedText}' to their clipboard`);
 });
+
+// Add page load event listener
+window.addEventListener("load", (event) => {
+    console.log("The fun bus is ready for passengers");
+  });
+
+  
