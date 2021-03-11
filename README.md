@@ -29,13 +29,13 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
   * `mouseover` x
   * `keydown` x
   * `wheel` x
-  * `load` 
+  * `load` x
   * `focus` x
   * `resize` x
   * `scroll` x
-  * `select`
+  * `select` x
   * `dblclick` x
-  * `drag / drop`
+  * `drag / drop` x
 
 Note: Drag and drop is a bit more advanced than the others: it's not actually a single type of event but several types that need to work together.
 

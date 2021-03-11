@@ -17,6 +17,14 @@ nav.addEventListener("mouseover", function (event) {
       }, 500);
 }, false);
 
+// Add mouseleave event listener
+nav.addEventListener("mouseenter", function() {
+    nav.style.border = "1px solid #fad6a5";
+    setTimeout(function() {
+        nav.style.border = "";
+      }, 500);
+});
+
 // Add wheel event listener
 let scale = 1;
 function wheelZoom (event) {
@@ -72,4 +80,3 @@ window.addEventListener("load", (event) => {
     console.log("The fun bus is ready for passengers");
   });
 
-  
