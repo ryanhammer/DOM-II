@@ -7,6 +7,7 @@ const btn = document.querySelector(".btn");
 const logo = document.querySelector("h1");
 const destination = document.querySelector(".content-destination");
 const destinationTypes = document.querySelectorAll(".destination");
+const contentSection = document.querySelector(".text-content");
 
 // Add mouseover event listener
 nav.addEventListener("mouseover", function (event) {
@@ -51,9 +52,17 @@ window.addEventListener("keydown", () => {
     });
 });
 
-// Add keyup event leistern that de-emphasizes destinations
+// Add keyup event listener that de-emphasizes destinations
 window.addEventListener("keyup", () => {
     destinationTypes.forEach( (div) => {
         div.style.backgroundColor = "";
     });
+});
+
+// Add select event listener that logs copied text
+contentSection.addEventListener("copy", function (event) {
+    const copiedText = document.getSelection();
+    event.clipboardData.setData("text/plain", copiedText.toString().toLowerCase());
+    event.preventDefault();
+    console.log(`The user copied '${copiedText}' to their clipboard`);
 });
