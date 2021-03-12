@@ -8,6 +8,7 @@ const logo = document.querySelector("h1");
 const destination = document.querySelector(".content-destination");
 const destinationTypes = document.querySelectorAll(".destination");
 const contentSection = document.querySelector(".text-content");
+const destinationSection = document.querySelector(".content-pick");
 
 // Add mouseover event listener
 nav.addEventListener("mouseover", function (event) {
@@ -80,3 +81,13 @@ window.addEventListener("load", (event) => {
     console.log("The fun bus is ready for passengers");
   });
 
+// Nesting two similar events somewhere in the site and preventing the event propagation properly.
+function bubblingListener (event) {
+    console.log(`The ${event.target.nodeName} was clicked and now it's passing through ${event.currentTarget.nodeName || "Window"}`);
+}
+
+btn.addEventListener("click", bubblingListener);
+destinationSection.addEventListener("click", (event) => {
+    event.stopImmediatePropagation();
+});
+destinationSection.addEventListener("click", bubblingListener);
