@@ -91,3 +91,8 @@ destinationSection.addEventListener("click", (event) => {
     event.stopImmediatePropagation();
 });
 destinationSection.addEventListener("click", bubblingListener);
+
+// Use .preventDefault() to stop nav menu from reloading page
+nav.addEventListener("click", (event) => {
+    event.preventDefault();
+})
